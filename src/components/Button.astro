@@ -1,0 +1,19 @@
+---
+import { Icon } from "astro-icon";
+
+export interface props {
+  href: string;
+  text: string;
+}
+
+const { href, text } = Astro.props;
+---
+
+<a href={href} class="button">
+  <span class="button__inner">
+    <span class="button__text">{text}</span>
+    <span class="button__icon">
+      <Icon name={"icon-arrow-next"} />
+    </span>
+  </span>
+</a>

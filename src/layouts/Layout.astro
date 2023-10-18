@@ -1,0 +1,23 @@
+---
+import * as Variables from "../variables.astro";
+
+import HelperGrid from "../components/HelperGrid.astro";
+import BsaeHead from "../components/BaseHead.astro";
+import BaseScript from "../components/BaseScript.astro";
+import BaseHeader from "../components/BaseHeader.astro";
+import BaseFooter from "../components/BaseFooter.astro";
+
+import "../styles/app.scss";
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+  <BsaeHead />
+  <body>
+    {Variables.IS_DEV && <HelperGrid gridNum="60" />}
+    <BaseHeader />
+    <slot />
+    <BaseFooter />
+    <BaseScript />
+  </body>
+</html>

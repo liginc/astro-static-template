@@ -1,0 +1,17 @@
+---
+import { Image } from "astro:assets";
+import SampleImage01 from "../assets/sample-01.jpg";
+
+export interface props {
+  name: string;
+}
+
+const { name } = Astro.props;
+---
+
+<article class="card">
+  <div class="card__thumbnails">
+    <Image src={SampleImage01} alt="" format="webp" quality={80} />
+  </div>
+  <p class="card__name">{name}</p>
+</article>
