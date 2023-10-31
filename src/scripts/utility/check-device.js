@@ -9,12 +9,8 @@ let windows = false;
 let safari = false;
 let chrome = false;
 
-sp =
-  (ua.includes("iphone") ||
-    (ua.includes("android") && ua.includes("mobile"))) &&
-  window.innerWidth < BREAKPOINT;
-ipad =
-  ua.includes("ipad") || (ua.includes("macintosh") && "ontouchend" in document);
+sp = (ua.includes("iphone") || (ua.includes("android") && ua.includes("mobile"))) && window.innerWidth < BREAKPOINT;
+ipad = ua.includes("ipad") || (ua.includes("macintosh") && "ontouchend" in document);
 tab = !sp && (ipad || ua.includes("android"));
 
 windows = ua.includes("windows nt");
